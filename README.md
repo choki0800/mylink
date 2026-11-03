@@ -18,9 +18,11 @@
 - Branch: `main`
 - Folder: `/ (root)`
 
-배포 후 예상 주소: `https://choki0800.github.io/mylink/MyLink/`
+공개 주소: [MyLink 열기](https://choki0800.github.io/mylink/MyLink/)
 
-실제 배포 및 접속 확인 전까지 이 주소는 제출 가능한 확정 주소가 아닙니다.
+전용 폴더: [MyLink/](https://github.com/choki0800/mylink/tree/main/MyLink)
+
+2026년 11월 3일 GitHub Pages 배포 성공과 공개 페이지 접속을 확인했습니다. 저장소 루트 주소도 `MyLink/`로 이동합니다.
 
 ## 링크 수정
 
