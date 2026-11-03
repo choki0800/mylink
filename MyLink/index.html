@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="choki0800의 마이링크. 자주 찾는 공간을 한곳에서 만나보세요.">
+  <meta name="theme-color" content="#f5f4ec">
+  <title>choki0800 · MyLink</title>
+  <style>
+    :root { color-scheme: light; --paper:#f5f4ec; --ink:#252b23; --muted:#61685d; --line:#dadfd1; --accent:#d6ee99; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100svh; color:var(--ink); background:var(--paper); font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif; -webkit-font-smoothing:antialiased; }
+    body::before { content:""; position:fixed; inset:0; z-index:-1; background-image:radial-gradient(#a9b29b 0.65px,transparent 0.65px); background-size:20px 20px; opacity:.28; pointer-events:none; }
+    a { color:inherit; text-decoration:none; }
+    button,input { font:inherit; }
+    a:focus-visible,button:focus-visible,input:focus-visible { outline:3px solid #527625; outline-offset:5px; }
+    .shell { width:min(100% - 40px,560px); margin:0 auto; padding:40px 0 24px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; margin-bottom:43px; }
+    .wordmark { display:flex; align-items:center; gap:8px; font-weight:750; font-size:19px; letter-spacing:-.7px; }
+    svg { display:block; flex-shrink:0; }
+    .edition { font-size:11px; font-weight:650; letter-spacing:1.8px; color:var(--muted); }
+    .profile { text-align:center; }
+    .avatar { width:90px; height:90px; margin:0 auto 22px; display:grid; place-items:center; border:1px solid #c1cbb0; border-radius:28px; background:var(--accent); transform:rotate(-6deg); box-shadow:5px 5px 0 #e5e7db; }
+    .avatar span { font-family:Georgia,serif; font-size:63px; line-height:1; transform:rotate(6deg); }
+    .eyebrow { margin:0 0 9px; font-size:11px; font-weight:650; letter-spacing:2px; color:var(--muted); }
+    h1 { margin:0; font-size:clamp(32px,7vw,42px); font-weight:750; letter-spacing:-1.5px; line-height:1.2; }
+    .intro { margin:14px 0 0; color:var(--muted); font-size:15px; line-height:1.8; word-break:keep-all; }
+    .tag { display:inline-flex; align-items:center; gap:7px; margin-top:19px; padding:7px 12px; border:1px solid var(--line); border-radius:30px; background:#ffffff70; font-size:11px; letter-spacing:.2px; }
+    .dot { height:6px; width:6px; background:#577d2c; border-radius:50%; }
+    .link-section { margin-top:37px; }
+    .section-label { margin:0 0 12px 3px; font-size:11px; font-weight:650; letter-spacing:1.8px; color:var(--muted); }
+    .links { display:grid; gap:12px; }
+    .link { display:flex; align-items:center; gap:17px; min-height:88px; padding:19px 21px; border:1px solid var(--line); border-radius:18px; background:#fffef9; transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease; }
+    .link:hover { transform:translateY(-3px); border-color:#a8b596; box-shadow:0 6px 0 #e2e6d8; }
+    .link.primary { background:var(--ink); border-color:var(--ink); color:#fffef9; }
+    .icon { width:43px; height:43px; display:grid; place-items:center; border:1px solid var(--line); border-radius:13px; background:#f0f2e7; }
+    .primary .icon { border-color:#4e5846; background:#3b4434; color:var(--accent); }
+    .link-text { flex:1; min-width:0; }
+    .link-title { display:block; font-size:16px; font-weight:700; line-height:1.5; }
+    .link-desc { display:block; margin-top:3px; font-size:12px; color:var(--muted); line-height:1.6; word-break:keep-all; }
+    .primary .link-desc { color:#cbd3c3; }
+    .arrow { align-self:center; font-size:23px; font-weight:400; }
+    .share { margin-top:27px; text-align:center; }
+    .share-button { display:inline-flex; align-items:center; gap:7px; border:0; background:transparent; color:var(--muted); cursor:pointer; padding:11px 14px; border-radius:10px; font-size:12px; }
+    .share-button:hover { background:#e9eddf; color:var(--ink); }
+    .feedback { min-height:19px; margin:4px 0 0; font-size:12px; color:#456524; }
+    .copy-fallback { display:block; width:100%; margin-top:10px; padding:12px; border:1px solid var(--line); border-radius:9px; background:white; }
+    [hidden] { display:none !important; }
+    footer { display:flex; align-items:center; justify-content:space-between; gap:14px; border-top:1px solid var(--line); margin-top:23px; padding-top:20px; color:var(--muted); font-size:11px; }
+    footer a { padding:4px 0; text-decoration:underline; text-underline-offset:3px; }
+    @media (max-width:420px) { .shell { width:calc(100% - 32px); padding-top:25px; } .topbar { margin-bottom:33px; } .edition { font-size:10px; letter-spacing:1.2px; } .link { padding:17px; gap:13px; } .link-section { margin-top:30px; } }
+    @media (prefers-reduced-motion:reduce) { .link { transition:none; } .link:hover { transform:none; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="MyLink 홈">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m10 13 4-4m-6 6-1 1a4.2 4.2 0 0 1-6-6l5-5a4.2 4.2 0 0 1 6 0m0 14a4.2 4.2 0 0 0 6 0l5-5a4.2 4.2 0 0 0-6-6l-1 1" transform="translate(1 0) scale(.9)"/></svg>
+        MyLink<span style="color:#63822c">.</span>
+      </a>
+      <span class="edition">A LITTLE CORNER OF THE WEB</span>
+    </header>
+    <main>
+      <section class="profile" aria-labelledby="profile-name">
+        <div class="avatar" aria-hidden="true"><span>c</span></div>
+        <p class="eyebrow">HELLO, WELCOME TO MY LINKS</p>
+        <h1 id="profile-name">choki0800</h1>
+        <p class="intro">배움과 일상을 잇는 링크.<br>자주 찾는 나의 공간을 한곳에 모았어요.</p>
+        <span class="tag"><span class="dot" aria-hidden="true"></span>Learn · Make · Connect</span>
+      </section>
+      <nav class="link-section" aria-label="나의 링크">
+        <h2 class="section-label">EXPLORE MY LINKS</h2>
+        <div class="links">
+          <a class="link primary" href="https://github.com/choki0800" target="_blank" rel="noopener noreferrer" aria-label="GitHub · 코드와 프로젝트, 새 탭에서 열기">
+            <span class="icon" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 19"/></svg></span>
+            <span class="link-text"><span class="link-title">GitHub</span><span class="link-desc">코드와 프로젝트가 모이는 곳</span></span><span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="link" href="https://www.hanyang.ac.kr/" target="_blank" rel="noopener noreferrer" aria-label="한양대학교 · 학교 소식과 공지, 새 탭에서 열기">
+            <span class="icon" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-6 9 6H3Zm2 3v7m7-7v7m7-7v7M3 21h18"/></svg></span>
+            <span class="link-text"><span class="link-title">한양대학교</span><span class="link-desc">학교 소식과 공지를 확인하는 곳</span></span><span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="link" href="https://portal.hanyang.ac.kr/" target="_blank" rel="noopener noreferrer" aria-label="HY-in 포털 · 학사 정보와 학교 서비스, 새 탭에서 열기">
+            <span class="icon" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8m-8 4h4"/></svg></span>
+            <span class="link-text"><span class="link-title">HY-in 포털</span><span class="link-desc">학사 정보와 학교 서비스를 한눈에</span></span><span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </nav>
+      <div class="share">
+        <button type="button" class="share-button" id="share-button"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>이 페이지 주소 복사</button>
+        <p class="feedback" id="share-status" role="status" aria-live="polite"></p>
+        <input id="copy-fallback" class="copy-fallback" aria-label="공유할 페이지 주소" readonly hidden>
+      </div>
+    </main>
+    <footer><span>© 2026 choki0800</span><a href="https://github.com/choki0800/mylink/tree/main/MyLink" target="_blank" rel="noopener noreferrer" aria-label="페이지 소스 보기, 새 탭에서 열기">Made with MyLink ↗</a></footer>
+  </div>
+  <script>
+    const shareButton = document.getElementById('share-button');
+    const shareStatus = document.getElementById('share-status');
+    const copyFallback = document.getElementById('copy-fallback');
+    shareButton.addEventListener('click', async () => {
+      const url = location.href.split('#')[0];
+      try {
+        await navigator.clipboard.writeText(url);
+        copyFallback.hidden = true;
+        shareStatus.textContent = '주소를 복사했어요. 원하는 곳에 붙여 넣어 주세요.';
+      } catch {
+        copyFallback.value = url;
+        copyFallback.hidden = false;
+        copyFallback.focus();
+        copyFallback.select();
+        shareStatus.textContent = '선택된 주소를 직접 복사해 주세요.';
+      }
+    });
+  </script>
+</body>
+</html>
